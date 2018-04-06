@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+app.use(express.static(__dirname + '/dist'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -11,7 +12,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.render('dist/index.html');
 });
 
 let port = process.env.PORT || 3000;
