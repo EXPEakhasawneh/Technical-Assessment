@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Deals from './Deals.js';
+import Style from './style.css';
 
 class App extends React.Component {
   render() {
     return(
-      <div>
+      <div className='container'>
         <Deals />
       </div>
     )
