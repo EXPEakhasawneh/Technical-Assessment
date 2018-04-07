@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 const DealsGrid = (props) => {
   let deals = props.deals;
-  console.log(props.deals);
   return(
     <div>
       <ul>
