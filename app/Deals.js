@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const DealsGrid = (props) => {
-  let deals = props.deals.offers.Hotel;
-  console.log(deals);
+  let deals = props.deals;
+  console.log(props.deals);
   return(
     <div>
       <ul>
@@ -19,7 +20,9 @@ const DealsGrid = (props) => {
                 </li>
                 <li>
                   {deal.offerDateRange.lengthOfStay} Night/s at
-                  {deal.hotelInfo.hotelName} for {deal.hotelPricingInfo.totalPriceValue}$
+                  {deal.hotelInfo.hotelName} for
+                  {' '} {deal.hotelPricingInfo.totalPriceValue}
+                  {' '} {deal.hotelPricingInfo.currency}
                 </li>
                 <li>
                   <Router>
@@ -39,6 +42,11 @@ const DealsGrid = (props) => {
     </div>
   )
 }
+
+DealsGrid.propTypes = {
+  deals: PropTypes.arrayOf(PropTypes.object)
+}
+
 
 class Deals extends React.Component {
   constructor(props) {
@@ -71,7 +79,7 @@ class Deals extends React.Component {
           ? <p>Loading</p>
           : <DealsGrid
               className='dealsGrid'
-              deals={this.state.deals}/>}
+              deals={this.state.deals.offers.Hotel}/>}
       </div>
     );
   }

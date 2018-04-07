@@ -29,6 +29,8 @@ li {
   margin-bottom: 20px;
   text-align: center;
   width: 500px;
+  background-color: #edfae6;
+  border: 1px solid #ffcb00;
 }
 
 .hotelIMG {
