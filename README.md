@@ -2,7 +2,7 @@
 
 This application for rendering Expedia offers that called from Expedia API https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel
 
-I chose NodeJS as a server-side because I feel confident writing JavaScript code. So you could guess why I picked React for front-end, let you write elegant code and every thing is divided into components which I think that helps to write a clean & dynamic code. 
+I chose NodeJS as a server-side because I feel confident writing JavaScript. For front-end I picked React, let you write elegant code and every thing is divided into components which I think that helps a lot to write a clean & dynamic code.
 
 ## Prerequisite
 
