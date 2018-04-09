@@ -10,7 +10,7 @@
   "author": "Ahmad Khasawneh",
   "homepage": "https://github.com/EXPEakhasawneh/Technical-Assessment#readme",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage --forceExit"
   },
   "babel": {
     "presets": [
