@@ -2,7 +2,7 @@
 
 This application for rendering Expedia offers that called from Expedia API https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel
 
-I chose NodeJS as a server-side because I feel confident writing JavaScript. For front-end I picked React, let you write elegant code and every thing is divided into components, Moreover, it's declarative programming, I think, better when you deal with html & CSS. 
+I chose NodeJS as a server-side because I feel confident writing JavaScript. For front-end I picked React, let you write elegant code and every thing is divided into components, Moreover, it's declarative programming, I think, better when you deal with html & CSS.
 
 ## Prerequisite
 
@@ -47,7 +47,7 @@ I tried to test GET Method it works locally but it fails when Travis build it, I
 * [NodeJS](https://github.com/nodejs) - Server-Side
 * [React](https://github.com/facebook/react) - Front-End
 * [webpack](https://github.com/webpack) - Bundles & packaging resources, used Babel transpiler to transform ES6 >> ES5
-* [Travis-CI](https://github.com/travis-ci) - Deployment on Heroku
+* [Travis](https://github.com/travis-ci) - Continuous Integration, deploy on Heroku
 * [Jest](https://github.com/facebook/jest) - For Testing
 
 ## Live site
