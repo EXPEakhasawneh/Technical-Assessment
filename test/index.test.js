@@ -5,7 +5,7 @@ describe('Test the root path', () => {
   test('It should response the GET method', (done) => {
     return request(app).get('/')
       .expect(200);
-    done.end();
+    done();
   });
 
   test('It should response API request', () => {
