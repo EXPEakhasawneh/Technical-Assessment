@@ -5,12 +5,9 @@ app.listen(3000, () => {
 });
 
 describe('Test the root path', () => {
-  test('It should response the GET method', () => {
+  test('It should response the GET method', (done) => {
     return request(app).get('/')
-      .then(response => {
-      console.log(response);
-        expect(response.statusCode).toBe(200);
-      });
+      .expect(200, done);
   });
 
   test('It should response API request', () => {
