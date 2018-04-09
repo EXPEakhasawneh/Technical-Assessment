@@ -28,8 +28,8 @@ $ npm install
 $ webpack -w
 ```
 
-4. Start the server (use nodemon instead to monitor changes on index.js)
+4. Start the server (use nodemon instead to monitor changes on server.js)
 
 ```console
-$ node index.js
+$ node server.js
 ```

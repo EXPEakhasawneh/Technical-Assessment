@@ -2,7 +2,7 @@
   "name": "technical-assessment",
   "version": "1.0.0",
   "description": "Retrieve offers from Exp API using NodeJS then render them using React ",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EXPEakhasawneh/Technical-Assessment.git"
