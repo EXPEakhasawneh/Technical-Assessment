@@ -30,7 +30,4 @@ app.get('/', (req, res) => {
   res.render('dist/index.html');
 });
 
-let port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server works on: ${port}`);
-});
+module.exports = app;
