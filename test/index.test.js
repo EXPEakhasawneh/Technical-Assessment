@@ -1,7 +1,7 @@
 const request = require('supertest');
 const app = require('../index.js');
-app.listen(5000, () => {
-  console.log(`Server works on: 5000`);
+app.listen(3000, () => {
+  console.log(`Server works on: 3000`);
 });
 
 describe('Test the root path', () => {
