@@ -11,7 +11,6 @@ describe('Test the root path', () => {
   test('It should response API request', () => {
     return request(app).get('/api/offers')
       .then(response => {
-      console.log(response)
         expect(response.body.offers).toBeDefined();
       });
   });
