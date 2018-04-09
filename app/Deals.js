@@ -19,7 +19,7 @@ const DealsGrid = (props) => {
                 </li>
                 <li>
                   {deal.offerDateRange.lengthOfStay} Night/s at
-                  {deal.hotelInfo.hotelName} for
+                  {' '} {deal.hotelInfo.hotelName} for
                   {' '} {deal.hotelPricingInfo.totalPriceValue}
                   {' '} {deal.hotelPricingInfo.currency}
                 </li>
@@ -68,6 +68,10 @@ class Deals extends React.Component {
         this.setState(() => {
           return {deals: JSONresponse};
         })
+      })
+      .catch(err => {
+        console.log(err);
+        this.retrieveDeals();
       })
   }
 
