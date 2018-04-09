@@ -69,6 +69,10 @@ class Deals extends React.Component {
           return {deals: JSONresponse};
         })
       })
+      .catch(err => {
+        console.log(err);
+        this.retrieveDeals();
+      })
   }
 
   render() {
