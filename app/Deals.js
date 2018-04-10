@@ -23,13 +23,13 @@ const DealsGrid = (props) => {
                   {' '} {deal.hotelPricingInfo.totalPriceValue}
                   {' '} {deal.hotelPricingInfo.currency}
                 </li>
-                <li>
+                <li className='linkButton'>
                   <Router>
                     <Link
                       className='link'
                       target='_blank'
                       to={decodeURIComponent(deal.hotelUrls.hotelInfositeUrl)}>
-                        Check out on Expedia
+                        View Deal on Expedia
                     </Link>
                   </Router>
                 </li>
