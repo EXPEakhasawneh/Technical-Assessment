@@ -11,13 +11,13 @@ const DealsGrid = (props) => {
           return (
             <li key={deal.hotelInfo.hotelId} className='deal'>
               <ul>
-                <li>{deal.destination.longName}</li>
+                <li style={{color: '#ff9100'}}>{deal.destination.longName}</li>
                 <li>
                   <img className='hotelIMG'
                     src={deal.hotelInfo.hotelImageUrl}
                     alt={deal.destination.longName}/>
                 </li>
-                <li>
+                <li style={{color: '#004170'}}>
                   {deal.offerDateRange.lengthOfStay} Night/s at
                   {' '} {deal.hotelInfo.hotelName} for
                   {' '} {deal.hotelPricingInfo.totalPriceValue}
