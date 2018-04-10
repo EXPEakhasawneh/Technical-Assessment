@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Map from './Map.js';
 
 const DealsGrid = (props) => {
   let deals = props.deals;
@@ -33,6 +34,14 @@ const DealsGrid = (props) => {
                     </Link>
                   </Router>
                 </li>
+                <li>
+                    <div className='map'>
+                      <Map
+                       lat={deal.hotelInfo.hotelLatitude}
+                       lng={deal.hotelInfo.hotelLongitude}
+                       text={deal.hotelInfo.hotelName}/>
+                    </div>
+                  </li>
               </ul>
             </li>
           )

@@ -30,7 +30,9 @@ li {
   margin: 45px;
   margin-bottom: 20px;
   text-align: center;
-  width: 500px;
+  width: 450px;
+  padding: 20px;
+  height: auto;
   background-color: #edfae6;
   border: 1px solid #ffcb00;
   display: inline-block;
@@ -55,4 +57,9 @@ li {
 .link {
   text-decoration: none;
   color: #8a0000
+}
+
+.map {
+  width: 430px;
+  height: 150px;
 }
