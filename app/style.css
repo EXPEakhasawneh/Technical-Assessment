@@ -22,15 +22,20 @@ li {
   flex-wrap: wrap;
   flex-direction: row;
   width: 1100px;
+  margin: auto;
 }
 
 .deal {
   flex-direction: column;
+  margin: 45px;
   margin-bottom: 20px;
   text-align: center;
-  width: 500px;
+  width: 450px;
+  padding: 20px;
+  height: auto;
   background-color: #edfae6;
   border: 1px solid #ffcb00;
+  display: inline-block;
 }
 
 .hotelIMG {
@@ -39,13 +44,22 @@ li {
   border-radius: 70%;
 }
 
-.link {
-  flex-wrap: wrap;
-  text-align: center;
-  border-color: #d4a900 #aa8700 #aa8700;
+.linkButton {
   background: linear-gradient(to top,#ffbe00 0,#ffcb00 100%);
-  border-width: 20px 20px 30px;
-  border-radius: .23em;
+  border-radius: .25em;
   cursor: pointer;
+  height: auto;
+  width: 200px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.link {
   text-decoration: none;
+  color: #8a0000
+}
+
+.map {
+  width: 430px;
+  height: 150px;
 }
