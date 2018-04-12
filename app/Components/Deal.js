@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Map from './Map.js';
 
-const DealsGrid = (props) => {
+const Deal = (props) => {
   let deals = props.deals;
   return(
     <div>
@@ -51,50 +51,8 @@ const DealsGrid = (props) => {
   )
 }
 
-DealsGrid.propTypes = {
+Deal.propTypes = {
   deals: PropTypes.arrayOf(PropTypes.object)
 }
 
-
-class Deals extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      deals: null
-    }
-
-    this.retrieveDeals = this.retrieveDeals.bind(this);
-  }
-
-  componentDidMount() {
-    this.retrieveDeals();
-  }
-
-  retrieveDeals() {
-    return fetch('http://localhost:3000'+'/api/offers')
-      .then(response => response.json())
-      .then(JSONresponse => {
-        this.setState(() => {
-          return {deals: JSONresponse};
-        })
-      })
-      .catch(err => {
-        console.log(err);
-        this.retrieveDeals();
-      })
-  }
-
-  render() {
-    return(
-      <div>
-        {!this.state.deals
-          ? <p>Loading</p>
-          : <DealsGrid
-              className='dealsGrid'
-              deals={this.state.deals.offers.Hotel}/>}
-      </div>
-    );
-  }
-}
-
-export default Deals;
+export default Deal;

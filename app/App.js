@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Deals from './Deals.js';
+import DealsGrid from './Components/DealsGrid.js';
 import Style from './style.css';
 
 class App extends React.Component {
   render() {
     return(
       <div className='container'>
-        <Deals />
+        <DealsGrid />
       </div>
     )
   }

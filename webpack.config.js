@@ -25,7 +25,7 @@ const config = {
       template: 'app/index.html'
     })
   ],
-  mode: "development"
+  mode: 'development'
 }
 
 if (process.env.NODE_ENV === 'production') {
