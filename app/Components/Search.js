@@ -4,9 +4,9 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
-      rate: 'Any',
-      stayLength: ''
+      destinationName: '',
+      minStarRating: 'Any',
+      lengthOfStay: ''
     };
 
     this.handleHotelChange = this.handleHotelChange.bind(this);
@@ -16,15 +16,15 @@ class Search extends React.Component {
   }
 
   handleHotelChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({destinationName: event.target.value});
   }
 
   handleRateChange(event) {
-    this.setState({rate: event.target.value});
+    this.setState({minStarRating: event.target.value});
   }
 
   handleStayLengthChange(event) {
-    this.setState({stayLength: event.target.value});
+    this.setState({lengthOfStay: event.target.value});
   }
 
   handleSubmit(event) {
@@ -38,7 +38,7 @@ class Search extends React.Component {
   }
 
   canBeSubmitted() {
-    return (!!this.state.value);
+    return (!!this.state.destinationName);
   }
 
   render() {
@@ -49,23 +49,24 @@ class Search extends React.Component {
           <input
             type='text'
             placeholder='Search...'
-            value={this.state.value}
+            destinationName={this.state.destinationName}
             onChange={this.handleHotelChange}
             required pattern='^[A-Za-z]+$'
             minLength='3'/>
         </label>
         <label>
-          Hotel Rate:
+          {' '}Hotel Rate: {' '}
           <select onChange={this.handleRateChange}>
-          <option value='Any'>Any</option>
-          <option value='1'>1 Star</option>
-          <option value='2'>2 Stars</option>
-          <option value='3'>3 Stars</option>
-          <option value='4'>4 Stars</option>
-          <option value='5'>5 Stars</option>
+            <option value='Any'>Any</option>
+            <option value='1'>1 Star</option>
+            <option value='2'>2 Stars</option>
+            <option value='3'>3 Stars</option>
+            <option value='4'>4 Stars</option>
+            <option value='5'>5 Stars</option>
           </select>
         </label>
         <label>
+          {' '}Length Of Staying: {' '}
           <input
             type='number'
             value={this.state.stayLength}

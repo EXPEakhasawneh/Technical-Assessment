@@ -19,7 +19,6 @@ app.get('/api/offers', (req, res) => {
     uid: 'foo',
     productType: 'Hotel'
   }
-console.log(req.params);
   let params = Object.assign(req.query, staticParams);
   let API = 'https://offersvc.expedia.com/offers/v2/getOffers';
 

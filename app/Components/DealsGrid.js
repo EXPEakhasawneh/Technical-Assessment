@@ -1,4 +1,5 @@
 import React from 'react';
+import queryString from 'query-string';
 import Deal from './Deal.js';
 import Search from './Search.js';
 
@@ -19,8 +20,18 @@ class DealsGrid extends React.Component {
   }
 
   retrieveDeals() {
-    return fetch('http://localhost:3000/api/offers',
-    {qs: this.state.searchValue})
+    let searchValue = this.state.searchValue;
+    let API = 'http://localhost:3000/api/offers';
+    if(Object.values(searchValue).length) {
+      if(searchValue.minStarRating === 'Any') {
+        delete searchValue.minStarRating;
+      }
+      if(searchValue.lengthOfStay === '') {
+        delete searchValue.lengthOfStay;
+      }
+      API+= `?${queryString.stringify(searchValue)}`;
+    }
+    return fetch(API)
       .then(response => response.json())
       .then(JSONresponse => {
         this.setState(() => {
@@ -34,10 +45,9 @@ class DealsGrid extends React.Component {
   }
 
   handleUserInput(searchValue) {
-    this.setState({
-      searchValue: searchValue
-    });
-    console.log(this.state);
+    this.setState(() => {
+      return {searchValue: searchValue};
+    }, () => {this.retrieveDeals();});
   }
 
   render() {
@@ -51,7 +61,7 @@ class DealsGrid extends React.Component {
           onUserInput={this.handleUserInput}/>
         <Deal
           className='dealsGrid'
-          deals={this.state.deals.offers.Hotel}/>}
+          deals={this.state.deals.offers.Hotel}/>
       </div>
     );
   }
