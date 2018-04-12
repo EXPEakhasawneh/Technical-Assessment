@@ -2,8 +2,6 @@
 
 This application for rendering Expedia offers that called from Expedia API https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel
 
-I chose NodeJS as a server-side because I feel confident writing JavaScript. For front-end I picked React, let you write elegant code and every thing is divided into components, Moreover, it's declarative programming, I think, better when you deal with html & CSS.
-
 ## Prerequisite
 
 * npm installed along with NodeJS
