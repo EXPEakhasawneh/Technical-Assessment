@@ -13,12 +13,14 @@ app.use((req, res, next) => {
 });
 
 app.get('/api/offers', (req, res) => {
-  let params = {
+  let staticParams = {
     scenario: 'deal-finder',
     page: 'foo',
     uid: 'foo',
     productType: 'Hotel'
   }
+console.log(req.params);
+  let params = Object.assign(req.query, staticParams);
   let API = 'https://offersvc.expedia.com/offers/v2/getOffers';
 
   return axios.get(API, {params: params})
