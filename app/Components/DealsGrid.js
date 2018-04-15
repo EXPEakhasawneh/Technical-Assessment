@@ -21,7 +21,7 @@ class DealsGrid extends React.Component {
 
   retrieveDeals() {
     let searchValue = this.state.searchValue;
-    let API = 'http://localhost:3000/api/offers';
+    let API = '/api/offers';
     if(Object.values(searchValue).length) {
       if(searchValue.minStarRating === 'Any') {
         delete searchValue.minStarRating;
