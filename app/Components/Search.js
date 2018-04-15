@@ -51,7 +51,7 @@ class Search extends React.Component {
             placeholder='Search...'
             destinationName={this.state.destinationName}
             onChange={this.handleHotelChange}
-            required pattern='^[A-Za-z]+$'
+            required pattern='^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$'
             minLength='3'/>
         </label>
         <label>
